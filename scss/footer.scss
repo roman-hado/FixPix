@@ -1,0 +1,15 @@
+.footer {
+  margin: 10px auto !important;
+  height: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  line-height: 18px;
+  color: $nevada;
+
+  @include for-mobile {
+    font-size: 11px;
+    flex-direction: column;
+  }
+}

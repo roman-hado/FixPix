@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/title-logo.png" type="image/icon type">
+  <link rel="stylesheet" href="styles/style.css" type="text/css" />
+  <title>FixPix</title>
+</head>
+<body>
+  <header class="header">
+    <div class="container header__wrapper">
+      <div class="header__logo">
+        <img class="header__logo--img" src="./images/logo.png" alt="logo">
+      </div>
+      <div class="header__params">
+        <label class="header__params--languages header__select--wrapper">
+          <select name="language" class="header__select">
+            <option value="English">English</option>
+            <option value="Ukraine">Ukraine</option>
+          </select>
+        </label>
+        <label class="header__params--currency header__select--wrapper">
+          <select name="currency" class="header__select">
+            <option value="USD">USD</option>
+            <option value="UAH">UAH</option>
+          </select>
+        </label>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="main__wrapper container">
+      <div class="billing">
+        <form action="#" id="billingForm" method="post">
+          <div class="billing__title--wrapper">
+            <p class="billing__title">Billing information</p>
+            <img
+              class="additional--info-icon"
+              src="images/icons/info-icon.svg"
+              alt="about-field"
+              title="Additional info"
+            >
+          </div>
+          <div class="billing__full-name">
+            <label class="billing__field error-alert">
+              <input
+                class="billing__field__input"
+                placeholder="First name"
+                name="name"
+              >
+            </label>
+            <label class="billing__field">
+              <input
+                class="billing__field__input"
+                type="text"
+                placeholder="Last name"
+                name="lastName"
+              >
+            </label>
+          </div>
+          <div class="billing__e-mail">
+            <label class="billing__field">
+              <input
+                class="billing__field__input"
+                placeholder="E-mail"
+                id="eMail"
+                name="eMail"
+              >
+            </label>
+          </div>
+          <div class="billing__field billing__country">
+            <label class="billing__field__select--wrapper">
+              <select name="billing__country" class="billing__field__select">
+                <option value="ukraine">Ukraine</option>
+                <option value="ukraine">England</option>
+              </select>
+            </label>
+          </div>
+          <label class="billing__field billing__field__phone">
+            <input
+              class="billing__field__input"
+              type="number"
+              placeholder="Phone number"
+              name="tel"
+            >
+            <img
+              class="additional--info-icon billing__field__input--icon"
+              src="images/icons/info-icon.svg"
+              alt="about-field"
+              title="Additional info"
+            >
+          </label>
+          <div class="billing__card">
+            <div class="billing__card__types">
+              <div class="billing__card__type billing__card__type--active">
+                <img src="images/visa.png" alt="visa">
+              </div>
+              <div class="billing__card__type">
+                <img src="images/paypal.png" alt="paypal">
+              </div>
+            </div>
+            <div class="billing__card__params">
+              <label class="billing__field">
+                <input
+                  class="billing__field__input"
+                  type="number"
+                  placeholder="Card number"
+                  name="cardNumber"
+                >
+              </label>
+              <div class="billing__card__info">
+                <div class="billing__field">
+                  <label class="billing__field__select--wrapper">
+                    <select name="billing__month" class="billing__field__select">
+                      <option value="01">01</option>
+                      <option value="02">02</option>
+                      <option value="...">...</option>
+                    </select>
+                  </label>
+                </div>
+                <div class="billing__field">
+                  <label class="billing__field__select--wrapper">
+                    <select name="billing__day" class="billing__field__select">
+                      <option value="01">01</option>
+                      <option value="02">02</option>
+                      <option value="03">03</option>
+                      <option value="04">04</option>
+                      <option value="...">...</option>
+                    </select>
+                  </label>
+                </div>
+                <label class="billing__field">
+                  <input
+                    class="billing__field__input billing__field__input--padding-right"
+                    type="text"
+                    placeholder="Security code"
+                    name="securityCode"
+                  >
+                  <img
+                    class="additional--info-icon billing__field__input--icon"
+                    src="images/icons/info-icon.svg"
+                    alt="about-field"
+                    title="Additional info"
+                  >
+                </label>
+              </div>
+            </div>
+          </div>
+          <button class="billing__button" type="submit">Submit order</button>
+        </form>
+      </div>
+      <div class="product">
+        <div class="product__columns">
+          <div class="product__column">
+            Product
+          </div>
+          <div class="product__column">
+            Price
+          </div>
+        </div>
+        <div class="line"></div>
+        <div class="product__info">
+          <div class="product__info__item">
+            <div>
+              <img
+                class="product__info__item--img"
+                src="images/logo-product.png"
+                alt="logo-product"
+              >
+            </div>
+            <div>
+              <p class="product__info__item--name">
+                Test Product
+              </p>
+              <p class="product__info__item--description">
+                Product description
+              </p>
+              <div class="product__info__item--renewal" >
+                <a href="#">Auto-renewal</a>
+              </div>
+            </div>
+          </div>
+          <div class="product__info__price">
+            100.00 USD
+          </div>
+        </div>
+        <div class="line"></div>
+        <div class="product__VAT">
+          <img
+            class="additional--info-icon"
+            src="images/icons/info-icon.svg"
+            alt="about-field"
+            title="Additional info"
+          >
+          <p class="product__VAT--text">VAT (20.00%): 20.00 USD</p>
+        </div>
+        <div class="line"></div>
+        <p class="product__total-price">
+          TOTAL: 120.00 USD
+        </p>
+        <p class="product__about">
+          Do not hesitate to contact our CUSTOMER CARE CENTER for more information about payment and delivery. <br>
+          Please state the order ID from the confirmation email as a reference so that we can assist you efficiently.
+        </p>
+        <p class="product__about">
+          24/7 English phone support for online payment related issues:
+        </p>
+        <div class="product__phone-info">
+          <div>
+            <img
+              class="product__phone-info--icon"
+              src="images/phone-icon.png"
+              alt="phone-icon"
+            >
+          </div>
+          <div class="product__phone-info--numbers">
+            <p>
+              <a
+                class="product__phone-info--number"
+                href="tel:+18883174868"
+              >
+                + 1-888-317-4868
+              </a>
+              (Toll free)
+            </p>
+            <p>
+              <a
+                class="product__phone-info--number"
+                href="tel:+16479777769"
+              >
+                + 1-647-977-7769
+              </a>
+              (International)
+            </p>
+          </div>
+        </div>
+        <p class="product__about">
+          By submitting your Order, you acknowledge that you are purchasing from PayPro Global (PayPro Global, Inc., PayPro Europe Limited or PayPro U.S. Inc.), an authorized e-Commerce reseller.
+        </p>
+        <p class="product__about">
+          Once the transaction is complete, your contact information will be shared with the product vendor for ongoing support purposes.
+        </p>
+        <div class="product__certificates">
+          <img
+            class="product__certificate"
+            src="images/certificate-1.png"
+            alt="certificate-1"
+          >
+          <img
+            class="product__certificate"
+            src="images/certificate-2.png"
+            alt="certificate-2"
+          >
+          <img
+            class="product__certificate"
+            src="images/certificate-3.png"
+            alt="certificate-3"
+          >
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="container footer">
+    <p>Privacy Policy | Terms and Conditions | Refund Policy</p>
+    <p>© PayPro Global, Inc. 2021</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/additional-methods.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

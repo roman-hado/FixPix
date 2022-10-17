@@ -1,0 +1,17 @@
+@import "billing";
+@import "product";
+
+.main {
+  padding-top: 34px;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+
+    @include for-mobile {
+      flex-direction: column-reverse;
+      gap: 24px;
+    }
+  }
+}
