@@ -318,6 +318,64 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+.select {
+  margin: 0 auto;
+  position: relative;
+  width: 100px;
+  color: #9A9A9A;
+  background: linear-gradient(180deg, rgb(253, 253, 254) 0%, rgb(236, 236, 237) 100%);
+}
+.select.is-active .select__body {
+  display: block;
+}
+.select__header {
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+  padding-left: 6px;
+  gap: 6px;
+}
+.select__current {
+  font-size: 13px;
+}
+.select__icon {
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  margin-left: auto;
+  text-align: center;
+  width: 20px;
+  font-size: 11px;
+}
+.select__body {
+  display: none;
+  border: 1px solid #cccccc;
+  border-top: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  border-radius: 3px;
+}
+.select__item {
+  cursor: pointer;
+  font-size: 13px;
+  height: 28px;
+  background: rgb(253, 253, 254);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-left: 6px;
+}
+.select__item:hover {
+  background-color: #f2f2f2;
+}
+
 .header {
   background-color: #FFFEF2;
 }
@@ -346,6 +404,7 @@ input[type=number] {
 .header__params {
   display: flex;
   gap: 10px;
+  width: 221px;
 }
 .header__params--languages {
   width: 130px;
@@ -353,27 +412,16 @@ input[type=number] {
 .header__params--currency {
   width: 81px;
 }
-.header__select {
-  width: 100%;
-  height: 28px;
-  padding: 0 4px;
-  line-height: 28px;
-  border: 1px solid #CDD8DD;
-  border-radius: 3px;
-  background-color: #F5F5F5;
-  color: #9A9A9A;
-  outline-color: #9A9A9A;
+.header__select--languages {
+  width: 130px;
 }
-.header__select--wrapper {
-  position: relative;
+.header__select--currency {
+  width: 81px;
 }
-.header__select--wrapper::after {
-  content: "▼";
-  font-size: 10px;
-  line-height: 28px;
-  color: #9A9A9A;
-  right: 4px;
-  position: absolute;
+.header__select--icon {
+  display: inline-block;
+  width: 14px;
+  height: 16px;
 }
 
 .billing {
@@ -479,8 +527,10 @@ input[type=number] {
   display: flex;
   justify-content: space-between;
   gap: 14px;
+  position: relative;
 }
 .billing__card__type {
+  position: relative;
   width: 100%;
   height: 35px;
   display: flex;
@@ -494,6 +544,7 @@ input[type=number] {
 }
 .billing__card__type--active {
   background-color: #E9F0FC;
+  top: 1px;
 }
 .billing__card__params {
   padding: 11px;

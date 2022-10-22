@@ -1,0 +1,64 @@
+.select {
+  margin: 0 auto;
+  position: relative;
+  width: 100px;
+  color: $dusty-gray;
+  background: linear-gradient(180deg, rgba(253,253,254,1) 0%, rgba(236,236,237,1) 100%);
+
+  &.is-active &__body {
+    display: block;
+  }
+
+  &__header {
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 28px;
+    padding-left: 6px;
+    gap: 6px;
+  }
+
+  &__current {
+    font-size: 13px;
+  }
+
+  &__icon {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    margin-left: auto;
+    text-align: center;
+    width: 20px;
+    font-size: 11px;
+  }
+
+  &__body {
+    display: none;
+    border: 1px solid #cccccc;
+    border-top: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    border-radius: 3px;
+  }
+
+  &__item {
+    cursor: pointer;
+    font-size: 13px;
+    height: 28px;
+    background: rgba(253,253,254,1);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding-left: 6px;
+
+    &:hover {
+      background-color: #f2f2f2;
+    }
+  }
+}

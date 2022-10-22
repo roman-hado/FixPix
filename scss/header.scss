@@ -28,6 +28,7 @@
   &__params {
     display: flex;
     gap: 10px;
+    width: 221px;
 
     &--languages {
       width: 130px;
@@ -39,27 +40,18 @@
   }
 
   &__select {
-    width: 100%;
-    height: 28px;
-    padding: 0 4px;
-    line-height: 28px;
-    border: 1px solid $geyser;
-    border-radius: 3px;
-    background-color: $wild-sand;
-    color: $dusty-gray;
-    outline-color: $dusty-gray;
+    &--languages {
+      width: 130px;
+    }
 
-    &--wrapper {
-      position: relative;
+    &--currency {
+      width: 81px;
+    }
 
-      &::after {
-        content: "▼";
-        font-size: 10px;
-        line-height: 28px;
-        color: $dusty-gray;
-        right: 4px;
-        position: absolute;
-      }
+    &--icon {
+      display: inline-block;
+      width: 14px;
+      height: 16px;
     }
   }
 }
