@@ -1,0 +1,55 @@
+.about {
+  grid-area: about;
+  max-width: 570px;
+
+  @include for-mobile {
+    margin: 0 auto;
+    font-size: 11px;
+  }
+
+  &__info {
+    margin-top: 17px;
+    padding: 0 4px;
+    font-size: 13px;
+    line-height: 18px;
+    color: $nevada;
+  }
+
+  &__phone-info {
+    display: flex;
+    margin-top: 10px;
+
+    &--img {
+      width: 36px;
+    }
+
+    &--numbers {
+      color: $nevada;
+      font-weight: 400;
+    }
+
+    &--number {
+      margin-left: 8px;
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 18px;
+      text-decoration: none;
+      color: $nevada;
+    }
+  }
+
+  &__certificates {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  &__certificate {
+    margin-top: 30px;
+    width: 112px;
+
+    @include for-mobile {
+      width: 70px;
+    }
+  }
+}

@@ -425,11 +425,17 @@ input[type=number] {
 }
 
 .billing {
-  width: 100%;
+  grid-area: billing;
+  max-width: 562px;
   padding: 20px;
   box-shadow: 0 4px 10px 3px #E5E9ED;
   border-radius: 5px;
   height: max-content;
+}
+@media (max-width: 700px) {
+  .billing {
+    margin: 0 auto;
+  }
 }
 .billing__title {
   color: #000;
@@ -537,14 +543,14 @@ input[type=number] {
   align-items: center;
   justify-content: center;
   border: 1px solid #CDD8DD;
-  border-bottom: none;
   border-radius: 3px 3px 0 0;
   background-color: #fff;
   cursor: pointer;
+  top: 1px;
 }
 .billing__card__type--active {
   background-color: #E9F0FC;
-  top: 1px;
+  border-bottom: none;
 }
 .billing__card__params {
   padding: 11px;
@@ -594,6 +600,7 @@ input[type=number] {
 }
 
 .product {
+  grid-area: product;
   width: 100%;
   font-size: 14px;
 }
@@ -681,30 +688,36 @@ input[type=number] {
     font-size: 12px;
   }
 }
-.product__about {
+
+.about {
+  grid-area: about;
+  max-width: 570px;
+}
+@media (max-width: 700px) {
+  .about {
+    margin: 0 auto;
+    font-size: 11px;
+  }
+}
+.about__info {
   margin-top: 17px;
   padding: 0 4px;
   font-size: 13px;
   line-height: 18px;
   color: #666C70;
 }
-@media (max-width: 700px) {
-  .product__about {
-    font-size: 11px;
-  }
-}
-.product__phone-info {
+.about__phone-info {
   display: flex;
   margin-top: 10px;
 }
-.product__phone-info--img {
+.about__phone-info--img {
   width: 36px;
 }
-.product__phone-info--numbers {
+.about__phone-info--numbers {
   color: #666C70;
   font-weight: 400;
 }
-.product__phone-info--number {
+.about__phone-info--number {
   margin-left: 8px;
   font-weight: 700;
   font-size: 13px;
@@ -712,22 +725,17 @@ input[type=number] {
   text-decoration: none;
   color: #666C70;
 }
-@media (max-width: 700px) {
-  .product__phone-info {
-    font-size: 11px;
-  }
-}
-.product__certificates {
+.about__certificates {
   display: flex;
   justify-content: center;
   gap: 15px;
 }
-.product__certificate {
+.about__certificate {
   margin-top: 30px;
   width: 112px;
 }
 @media (max-width: 700px) {
-  .product__certificate {
+  .about__certificate {
     width: 70px;
   }
 }
@@ -736,13 +744,13 @@ input[type=number] {
   padding-top: 34px;
 }
 .main__wrapper {
-  display: flex;
-  justify-content: space-between;
-  gap: 18px;
+  display: grid;
+  grid-template-areas: "billing product" "billing about";
+  column-gap: 22px;
 }
 @media (max-width: 700px) {
   .main__wrapper {
-    flex-direction: column-reverse;
+    grid-template-areas: "product" "billing" "about";
     gap: 24px;
   }
 }

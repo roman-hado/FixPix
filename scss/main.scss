@@ -1,16 +1,23 @@
 @import "billing";
 @import "product";
+@import "about";
 
 .main {
   padding-top: 34px;
 
   &__wrapper {
-    display: flex;
-    justify-content: space-between;
-    gap: 18px;
+    display: grid;
+    grid-template-areas:
+      'billing product'
+      'billing about';
+    column-gap: 22px;
 
     @include for-mobile {
-      flex-direction: column-reverse;
+      grid-template-areas:
+        'product'
+        'billing'
+        'about'
+      ;
       gap: 24px;
     }
   }

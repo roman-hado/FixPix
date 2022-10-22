@@ -1,9 +1,14 @@
 .billing {
-  width: 100%;
+  grid-area: billing;
+  max-width: 562px;
   padding: 20px;
   box-shadow: 0 4px 10px 3px #E5E9ED;
   border-radius: 5px;
   height: max-content;
+
+  @include for-mobile {
+    margin: 0 auto;
+  }
 
   &__title {
     color: $black;
@@ -122,14 +127,14 @@
       align-items: center;
       justify-content: center;
       border: 1px solid $geyser;
-      border-bottom: none;
       border-radius: 3px 3px 0 0;
       background-color: $white;
       cursor: pointer;
+      top: 1px;
 
       &--active {
         background-color: $selago;
-        top: 1px;
+        border-bottom: none;
       }
     }
 
