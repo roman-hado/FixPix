@@ -16,7 +16,7 @@
     <header class="header">
       <div class="container header__wrapper">
         <div class="header__logo">
-          <img class="header__logo--img" src="./images/logo.png" alt="logo">
+          <img class="header__logo--img" src="images/logo.png" alt="logo">
         </div>
         <div class="header__params">
           <div class="select header__select--languages">
@@ -82,6 +82,7 @@
                   class="billing__field__input"
                   placeholder="First name"
                   name="name"
+                  id="formName"
                 >
               </label>
               <label class="billing__field">
@@ -89,7 +90,8 @@
                   class="billing__field__input"
                   type="text"
                   placeholder="Last name"
-                  name="lastName"
+                  name="sur_name"
+                  id="formSurname"
                 >
               </label>
             </div>
@@ -98,8 +100,8 @@
                 <input
                   class="billing__field__input"
                   placeholder="E-mail"
-                  id="eMail"
                   name="eMail"
+                  id="formEmail"
                 >
               </label>
             </div>
@@ -117,6 +119,7 @@
                 type="number"
                 placeholder="Phone number"
                 name="tel"
+                id="formPhone"
               >
               <img
                 class="additional--info-icon billing__field__input--icon"
@@ -141,6 +144,7 @@
                     type="number"
                     placeholder="Card number"
                     name="cardNumber"
+                    id="formCard"
                   >
                 </label>
                 <div class="billing__card__info">
@@ -170,6 +174,7 @@
                       type="text"
                       placeholder="Security code"
                       name="securityCode"
+                      id="formCode"
                     >
                     <img
                       class="additional--info-icon billing__field__input--icon"
@@ -306,6 +311,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/additional-methods.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="module" src="./js/main.js"></script>
   </body>
 </html>

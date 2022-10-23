@@ -80,6 +80,11 @@
       &--padding-right {
         padding-right: 28px;
       }
+
+      &:focus {
+        border: 1px solid $nevada;
+        outline: none;
+      }
     }
 
     &__select {
